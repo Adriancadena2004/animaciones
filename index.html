@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Animar Sprites con CSS</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .fondo {
+      height: 685px;
+      width: 2000px;
+      background: url("parque.png");
+      position: relative;
+      z-index: 1;
+    }
+    
+    .personaje {
+      height: 360px;
+      width: 360px;
+      background: url("niño\ tonto.png");
+      margin: 0 auto;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      /* background-position: -720px 0; */
+      animation: correr 2s steps(11) infinite;
+      z-index: 2;
+    }
+    
+    @keyframes correr {
+      0% {
+        background-position: 0px;
+      }
+      100% {
+        background-position: -3960px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="fondo">
+    <div class="personaje"></div>
+  </div>
+</body>
+</html>
